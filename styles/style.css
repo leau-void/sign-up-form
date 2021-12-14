@@ -10,6 +10,7 @@
 
 body {
   height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 #root {
@@ -81,21 +82,12 @@ body {
   width: 100%;
 }
 
+.intro-text {
+  font-weight: bold;
+}
+
 i {
   font-style: italic;
-}
-
-.auth-form input {
-  border: 1px solid #E5E7EB;
-}
-
-.auth-form .focus {
-  -webkit-box-shadow: 0 0 4px 4px lightblue;
-          box-shadow: 0 0 4px 4px lightblue;
-}
-
-.auth-form .error {
-  border-color: red;
 }
 
 .auth-form [type="submit"] {
@@ -110,15 +102,35 @@ i {
           box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.bottom-panel :-webkit-any-link {
+.input-wrap label {
+  color: #424242;
+}
+
+.input-wrap input {
+  padding: 6px 8px;
+  outline: 0;
+  border: 1px solid #E5E7EB;
+}
+
+.input-wrap .focus {
+  border-color: blue;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.input-wrap .error {
+  border-color: darkred;
+}
+
+.form-bottom :-webkit-any-link {
   color: #596D48;
 }
 
-.bottom-panel :-moz-any-link {
+.form-bottom :-moz-any-link {
   color: #596D48;
 }
 
-.bottom-panel :any-link {
+.form-bottom :any-link {
   color: #596D48;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,5 @@
 $main-color: #596D48
+$spacing: 8px
 
 \@font-face
     font-family: 'Norse-Bold'
@@ -11,6 +12,7 @@ $main-color: #596D48
 
 body
   height: 100%
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 #root
   height: 100%
@@ -58,30 +60,47 @@ body
 .content
   width: 100%
 
+.intro-text
+  font-weight: bold
 i
   font-style: italic
 
 .auth-form
-  input
-    border: 1px solid #E5E7EB
-
-  .focus
-    box-shadow: 0 0 4px 4px lightblue
-
-  .error
-    border-color: red
-
   [type="submit"]
     background: $main-color
     color: white
     border-radius: 8px
-    padding: 12px 48px
+    padding: $spacing*1.5 $spacing*6
     font-size: 16px
     font-weight: bold
     border: 0
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1)
 
+.form-card
 
-.bottom-panel
+.form-title
+
+.form-wrap
+
+.input-wrap
+  label
+    color: #424242
+    
+  input
+    padding: $spacing*0.75 $spacing
+    outline: 0
+    border: 1px solid #E5E7EB
+
+  
+  .focus
+    border-color: blue
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2)
+
+  .error
+    border-color: darkred
+
+
+
+.form-bottom
   \:any-link
     color: $main-color
