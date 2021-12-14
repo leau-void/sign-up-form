@@ -1,0 +1,87 @@
+$main-color: #596D48
+
+\@font-face
+    font-family: 'Norse-Bold'
+    src: url(../assets/Norse-Bold.otf) format("opentype")
+
+  
+\:root
+  height: 100%
+  font-size: calc(100% + 0.5vw)
+
+body
+  height: 100%
+
+#root
+  height: 100%
+  display: flex
+  width: 100%
+  
+.sidebar
+  width: 40%
+  min-width: 275px
+  height: 100%
+  background: center / cover no-repeat url(../assets/leaf-bg.jpg)
+  position: relative
+
+.logo-and-name
+  margin-top: 20vh
+  width: 100%
+  height: 20%
+  min-height: 100px
+  background: rgba(0, 0, 0, 0.4)
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 0.25rem
+
+.logo
+  height: 80%
+
+.name
+  font-family: 'Norse-Bold', 'sans-serif'
+  color: white
+  font-size: 100px
+
+.image-source
+  color: white
+  font-size: 0.75rem
+  position: absolute
+  width: 100%
+  text-align: center
+  bottom: 1rem
+
+  \:any-link
+    color: white
+
+
+.content
+  width: 100%
+
+i
+  font-style: italic
+
+.auth-form
+  input
+    border: 1px solid #E5E7EB
+
+  .focus
+    box-shadow: 0 0 4px 4px lightblue
+
+  .error
+    border-color: red
+
+  [type="submit"]
+    background: $main-color
+    color: white
+    border-radius: 8px
+    padding: 12px 48px
+    font-size: 16px
+    font-weight: bold
+    border: 0
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1)
+
+
+.bottom-panel
+  \:any-link
+    color: $main-color
