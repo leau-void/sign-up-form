@@ -1,0 +1,22 @@
+{
+  "name": "sign-up-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leau-void/sign-up-form.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leau-void/sign-up-form/issues"
+  },
+  "homepage": "https://github.com/leau-void/sign-up-form#readme",
+  "dependencies": {
+    "sass": "^1.45.0"
+  }
+}
