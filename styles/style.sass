@@ -1,5 +1,10 @@
-$main-color: #596D48
+$color-main: #596D48
+$color-light: #E5E7EB
+$color-dark: #424242
 $spacing: 8px
+
+*
+  box-sizing: content-box
 
 \@font-face
     font-family: 'Norse-Bold'
@@ -8,7 +13,7 @@ $spacing: 8px
   
 \:root
   height: 100%
-  font-size: calc(100% + 0.5vw)
+  font-size: calc(100% + 0.1vw)
 
 body
   height: 100%
@@ -20,7 +25,7 @@ body
   width: 100%
   
 .sidebar
-  width: 40%
+  width: 45%
   min-width: 275px
   height: 100%
   background: center / cover no-repeat url(../assets/leaf-bg.jpg)
@@ -59,37 +64,79 @@ body
 
 .content
   width: 100%
+  height: 100%
+  background: rgba($color-light, 0.4)
+  display: flex
+  flex-direction: column
+  gap: $spacing*4
+  overflow-y: auto
 
 .intro-text
   font-weight: bold
+  max-width: 80%
+  padding: $spacing*2 $spacing*5
+  font-size: 1.1rem
+  display: flex
+  flex-direction: column
+  gap: $spacing*3.5
+  line-height: 1.2rem
+  padding-top: $spacing*4
+  margin-top: auto
+
 i
   font-style: italic
 
 .auth-form
+  margin-bottom: auto
+
   [type="submit"]
-    background: $main-color
+    background: $color-main
     color: white
     border-radius: 8px
-    padding: $spacing*1.5 $spacing*6
+    padding: $spacing*1.75 $spacing*6
     font-size: 16px
     font-weight: bold
     border: 0
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1)
+    box-shadow: 2px 2px 4px rgba($color-dark, 0.3)
+    cursor: pointer
 
 .form-card
+  background: white
+  padding: $spacing*3 $spacing*5
+  box-shadow: 0 4px 4px rgba($color-dark, 0.2)
 
 .form-title
+  font-size: 1.3rem
+  font-weight: bold
+  color: $color-dark
+  margin-bottom: $spacing*2.5
+  margin-left: $spacing/4
 
 .form-wrap
+  display: flex
+  flex-wrap: wrap
+  align-items: flex-start
+  justify-content: flex-start
+  gap: $spacing*2 $spacing*6
 
 .input-wrap
+  display: flex
+  flex-direction: column
+  width: 34%
+  min-width: 200px
+
   label
-    color: #424242
+    color: $color-dark
+    font-size: 0.8rem
+    font-weight: bold
+    margin: $spacing/4 0
     
   input
     padding: $spacing*0.75 $spacing
     outline: 0
-    border: 1px solid #E5E7EB
+    border: 1px solid $color-light
+    border-radius: 4px
+    font-size: 16px
 
   
   .focus
@@ -99,8 +146,23 @@ i
   .error
     border-color: darkred
 
+  .error + .error-text
+    padding: $spacing/4 0
+
+    &::after
+      content: "* Passwords do not match"
+      color: darkred
+      display: block
+      font-size: 0.6rem
 
 
 .form-bottom
+  padding: $spacing*4 $spacing*2 $spacing*2 $spacing*6
+
+  button
+    margin-bottom: $spacing*4
+
   \:any-link
-    color: $main-color
+    color: $color-main
+    text-decoration: 0
+    font-weight: bold
